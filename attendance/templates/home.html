@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <style media="screen">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #666;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #f2f2f2;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+
+<body>
+  <header>
+    <h1>Attendance Records</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Attendance</a></li>
+      <li><a href="#">Grades</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Welcome, Yadav</h2>
+    <p>Here you can view attendance records of your students.</p>
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <th>Course Name</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Yadav1</td>
+        <td>Distributed Computing</td>
+        <td>March 13, 2023</td>
+        <td>Present</td>
+      </tr>
+      <tr>
+        <td>Yadav2</td>
+        <td>Application Development Laboratory</td>
+        <td>March 14, 2023</td>
+        <td>Absent</td>
+      </tr>
+      <tr>
+        <td>Yadav3</td>
+        <td>Innovation Practices Laboratory</td>
+        <td>March 15, 2023</td>
+        <td>Late</td>
+      </tr>
+    </table>
+  </main>
+  <footer>
+    <p>&copy; Designed and Developed for PSG College of Technology</p>
+  </footer>
+</body>
+
+</html>
