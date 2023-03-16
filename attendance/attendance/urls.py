@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.LoginPage, name='login'),
     path('home/',views.HomePage,name='home'),
     path('logout/',views.LogoutPage,name='logout'),
+    path('admin1/', views.AdminLogin,name='adminLogin'),
 
 ]

@@ -35,6 +35,19 @@ def LoginPage(request):
 
     return render (request,'login.html')
 
+def AdminLogin(request):
+    if request.method=='POST':
+        uname=request.POST.get('username')
+        pass1=request.POST.get('pass')
+        user=authenticate(request,username=uname,password=pass1)
+        if user is not None:
+            login(request,user)
+            return redirect('home')
+        else:
+            return HttpResponse('Invalid Credentials')
+
+    return render (request,'adminLogin.html')
+
 def LogoutPage(request):
     logout(request)
     return redirect('login')
