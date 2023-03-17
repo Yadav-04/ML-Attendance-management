@@ -14,11 +14,14 @@
 
     <div class="container">
         <div class="myform">
-            <form>
+            <form action="" method="POST">
                 <h2>ADMIN LOGIN</h2>
                 {% csrf_token %}
-                <input type="text" placeholder="Admin Name" id="username" name="username" required="">
-                <input type="password" placeholder="Password" id="password" name="pass1" required="">
+                <!-- <input type="text" placeholder="Admin Name" id="aname" name="aname" required="">
+                <input type="password" placeholder="Password" id="apass" name="apass" required="">
+                <button type="submit">LOGIN</button> -->
+                <input type="text" placeholder="Username" id="username" name="username" required="">
+                <input type="password" placeholder="Password" id="password" name="pass" required="">
                 <button type="submit">LOGIN</button>
             </form>
             <a href="{% url 'login' %}" id="haveAccount">Looking for professor login?</a>

@@ -41,9 +41,22 @@ def LoginPage(request):
 
 
 def AdminLogin(request):
+    # if request.method == 'POST':
+    #     adminName = request.POST.get('aname')
+    #     adminPass = request.POST.get('apass')
+    #     print(adminName, adminPass)
+    #     if adminName == 'admin' and adminPass == 'admin123':
+    #         user = authenticate(request, username=adminName, password=adminPass)
+    #         if user is not None:
+    #             login(request, user)
+    #             return redirect('ahome')
+    #         else:
+    #             return HttpResponse('Invalid Credentials')
+
     if request.method == 'POST':
         uname = request.POST.get('username')
         pass1 = request.POST.get('pass')
+        print(uname,pass1)
         user = authenticate(request, username=uname, password=pass1)
         if user is not None:
             login(request, user)
