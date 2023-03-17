@@ -1,119 +1,82 @@
-      *,
-      *:before,
-      *:after {
+      * {
           padding: 0;
           margin: 0;
           box-sizing: border-box;
+          font-family: poppins;
       }
 
       body {
-          background-color: #080710;
           background-size: cover;
       }
 
-      .background {
-          width: 430px;
-          height: 520px;
+      div.container {
           position: absolute;
-          transform: translate(-50%, -50%);
-          left: 50%;
-          top: 50%;
-      }
-
-      .background .shape {
-          height: 200px;
-          width: 200px;
-          position: absolute;
-          border-radius: 50%;
-      }
-
-      form {
-          height: 600px;
-          width: 450px;
-          background-color: rgba(78, 103, 150, 0.75);
-          position: absolute;
-          transform: translate(-50%, -50%);
           top: 50%;
           left: 50%;
-          border-radius: 10px;
-          backdrop-filter: blur(10px);
-          border: 2px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-          padding: 50px 35px;
-      }
+          transform: translate(-50%, -50%);
 
-      form h3 {
-          font-size: 32px;
-          font-weight: 500;
-          line-height: 42px;
-          text-align: center;
-      }
-
-      label {
-          display: block;
-          margin-top: 30px;
-          font-size: 16px;
-          font-weight: 500;
-      }
-
-      input {
-          display: block;
-          height: 40px;
-          width: 100%;
-          background-color: rgba(255, 255, 255, 0.07);
-          border-radius: 3px;
-          padding: 0 10px;
-          margin-top: 2px;
-          font-size: 14px;
-          font-weight: 300;
-      }
-
-      ::placeholder {
-          color: #e5e5e5;
-      }
-
-      button {
-          margin-top: 14px;
-          width: 100%;
-          background-color: #ffffff;
-          color: #080710;
-          padding: 15px 0;
-          font-size: 18px;
-          font-weight: 600;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-
-      .social {
-          margin-top: 30px;
           display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          background-color: white;
+          padding: 30px;
+          box-shadow: 0 50px 50px -50px darkslategray;
+
+          opacity: 0.9;
+          /* added opacity property */
       }
 
-      .social div {
-          background: red;
-          width: 150px;
-          border-radius: 3px;
-          padding: 5px 10px 10px 5px;
-          background-color: rgba(255, 255, 255, 0.27);
-          color: #eaf0fb;
+      div.container div.myform {
+          width: 270px;
+          margin-right: 30px;
+      }
+
+      div.container div.myform h2 {
+          color: #1c1c1e;
+          margin-bottom: 20px;
+      }
+
+      div.container div.myform input {
+          border: none;
+          outline: none;
+          border-radius: 0;
+          width: 100%;
+          border-bottom: 2px solid #1c1c1e;
+          margin-bottom: 25px;
+          padding: 7px 0;
+          font-size: 14px;
+      }
+
+      div.container div.myform button {
+          color: white;
+          background-color: #1c1c1e;
+          border: none;
+          outline: none;
+          border-radius: 2px;
+          font-size: 14px;
+          padding: 5px 12px;
+          font-weight: 500;
+      }
+
+      div.container div.image img {
+          width: 300px;
+      }
+
+      #createAccount {
+          display: block;
           text-align: center;
+          margin-top: 30px;
       }
-
-      .social div:hover {
-          background-color: rgba(255, 255, 255, 0.47);
-      }
-
-      .social .fb {
-          margin-left: 25px;
-      }
-
-      .social i {
-          margin-right: 4px;
-      }
-
 
       #haveAccount {
           display: block;
           text-align: center;
           margin-top: 15px;
+      }
+
+      #adminAccount {
+          display: block;
+          text-align: center;
+          margin-top: 30px;
       }

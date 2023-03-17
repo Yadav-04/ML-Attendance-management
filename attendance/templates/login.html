@@ -1,29 +1,30 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Login Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
 </head>
 
 <body background="{% static 'images/psgbg.jpg' %}">
-  <div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <form method="post">
-      <h3>PSG Attendance Management</h3>
-      {% csrf_token %}
-      <label for="username">Username</label>
-      <input type="text" placeholder="Enter Username" id="username" name="username">
-
-      <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" name="pass">
-
-      <button type="submit">Log In</button>
-      <a href="{% url 'signup' %}" id="createAccount">Create an account</a>
-    </form>
+  <div class="container">
+    <div class="myform">
+      <form action="" method="POST">
+        <h2>LOGIN</h2>
+        {% csrf_token %}
+        <input type="text" placeholder="Username" id="username" name="username" required="">
+        <input type="password" placeholder="Password" id="password" name="pass" required="">
+        <button type="submit">LOGIN</button>
+        <a href="{% url 'signup' %}" id="createAccount">Create an account</a>
+        <a href="{% url 'adminLogin' %}" id="adminAccount">Click here for admin login</a>
+      </form>
+    </div>
+    <div class="image">
+      <img src="{% static 'images/psglogo.jpg' %}">
+    </div>
   </div>
 </body>
 

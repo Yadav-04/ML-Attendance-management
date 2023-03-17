@@ -16,10 +16,12 @@
         <div class="myform">
             <form>
                 <h2>ADMIN LOGIN</h2>
-                <input type="text" placeholder="Admin Name" required="">
-                <input type="password" placeholder="Password" required="">
+                {% csrf_token %}
+                <input type="text" placeholder="Admin Name" id="username" name="username" required="">
+                <input type="password" placeholder="Password" id="password" name="pass1" required="">
                 <button type="submit">LOGIN</button>
             </form>
+            <a href="{% url 'login' %}" id="haveAccount">Looking for professor login?</a>
         </div>
         <div class="image">
             <img src="{% static 'images/psglogo.jpg' %}">

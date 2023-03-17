@@ -3,36 +3,32 @@
 <html lang="en">
 
 <head>
-    <title>Signup Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
     <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 </head>
 
 <body background="{% static 'images/psgbg.jpg' %}">
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+    <div class="container">
+        <div class="myform">
+            <form action="" method="POST">
+                <h2>SIGNUP</h2>
+                {% csrf_token %}
+                <input type="text" placeholder="Username" name="username" id="username" required="">
+                <input type="email" placeholder="Email" name="email" id="email" required="">
+                <input type="password" placeholder="Password" id="password1" name="password1" required="">
+                <input type="password" placeholder="Confirm Password" id="password2" name="password2" required="">
+                <button type="submit">SIGNUP</button>
+                <a href="{% url 'login' %}" id="haveAccount">Already have an account?</a>
+                <a href="{% url 'adminLogin' %}" id="adminAccount">Click here for admin login</a>
+            </form>
+        </div>
+        <div class="image">
+            <img src="{% static 'images/psglogo.jpg' %}">
+        </div>
     </div>
-    <form action="" method="post">
-        {% csrf_token %}
-        <!-- <img src="{% static 'images/psglogo.jpg' %}" alt="Logo" class="logo"> -->
-        <h3>Signup</h3>
-
-        <label for="username">Username</label>
-        <input type="text" placeholder="Username" name="username" id="username">
-
-        <label for="email">Email</label>
-        <input type="email" placeholder="Email" name="email" id="email">
-
-        <label for="password1">Password</label>
-        <input type="password" placeholder="Password" id="password1" name="password1">
-
-
-        <label for="password2">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="password2" name="password2">
-        <button type="submit">Signup</button>
-
-        <a href="{% url 'login' %}" id="haveAccount">Already have an account?</a>
-    </form>
 </body>
 
 </html>
